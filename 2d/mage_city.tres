@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://m4bxkhsoqi82"]
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://m4bxkhsoqi82"]
 
 [ext_resource type="Texture2D" uid="uid://bs0tghwkrfnfc" path="res://2d/tilesets/mage_city.png" id="1_m10ip"]
+[ext_resource type="PackedScene" uid="uid://cfgyutfa8nuef" path="res://scenes/particles/smoke.tscn" id="2_k61aa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j6sym"]
 resource_name = "magecity"
@@ -315,6 +316,15 @@ texture_region_size = Vector2i(32, 32)
 6:18/0 = 0
 5:18/0 = 0
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_ktc2j"]
+resource_name = "objects"
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_mppj1"]
+resource_name = "particles"
+scenes/1/scene = ExtResource("2_k61aa")
+
 [resource]
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_j6sym")
+sources/1 = SubResource("TileSetScenesCollectionSource_ktc2j")
+sources/2 = SubResource("TileSetScenesCollectionSource_mppj1")

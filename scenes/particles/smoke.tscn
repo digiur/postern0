@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://cfgyutfa8nuef"]
+
+[ext_resource type="Texture2D" uid="uid://d0cjbyq0aflkb" path="res://2d/textures/white_circle.png" id="1_ilg7v"]
+
+[sub_resource type="Gradient" id="Gradient_78i2w"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.508108, 1)
+colors = PackedColorArray(0.125911, 0.125911, 0.125911, 1, 0.205117, 0.205117, 0.205117, 1, 0.408329, 0.408329, 0.408329, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kxut0"]
+gradient = SubResource("Gradient_78i2w")
+
+[sub_resource type="Curve" id="Curve_a62um"]
+_data = [Vector2(0, 0), 0.0, -2.74729e-07, 0, 0, Vector2(0.199501, 1), 0.0, 0.0, 0, 0, Vector2(0.508728, 1), 0.0, 0.0, 0, 0, Vector2(0.753117, 0.5), 0.0, 0.0, 0, 0, Vector2(0.877806, 0.490909), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.94925, 0.0, 0, 0]
+point_count = 6
+
+[sub_resource type="CurveTexture" id="CurveTexture_joiw3"]
+curve = SubResource("Curve_a62um")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jxwrd"]
+lifetime_randomness = 0.3
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 25.0
+gravity = Vector3(0, -12, 0)
+initial_velocity_max = 10.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 0.25
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_joiw3")
+color_ramp = SubResource("GradientTexture1D_kxut0")
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+amount = 64
+process_material = SubResource("ParticleProcessMaterial_jxwrd")
+texture = ExtResource("1_ilg7v")
+lifetime = 5.0
+preprocess = 10.0
+collision_base_size = 0.25
+visibility_rect = Rect2(-20, -240, 40, 250)
+local_coords = true
+draw_order = 0
+trail_lifetime = 1.13
