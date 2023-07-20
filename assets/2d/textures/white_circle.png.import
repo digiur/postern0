@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs0tghwkrfnfc"
-path="res://.godot/imported/mage_city.png-1bd22ae8085f824192355a1705497129.ctex"
+uid="uid://d0cjbyq0aflkb"
+path="res://.godot/imported/white_circle.png-69a06a7e71915e514e18359159c57e93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2d/tilesets/mage_city.png"
-dest_files=["res://.godot/imported/mage_city.png-1bd22ae8085f824192355a1705497129.ctex"]
+source_file="res://assets/2d/textures/white_circle.png"
+dest_files=["res://.godot/imported/white_circle.png-69a06a7e71915e514e18359159c57e93.ctex"]
 
 [params]
 

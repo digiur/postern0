@@ -1,10 +1,10 @@
 [gd_scene load_steps=41 format=3 uid="uid://c5miafhqbx607"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_aygpa"]
-[ext_resource type="Texture2D" uid="uid://bmyilfdtg5bj" path="res://2d/sprite_sheets/player.png" id="2_vxxal"]
+[ext_resource type="Script" path="res://scripts/Player/2d_player.gd" id="1_aygpa"]
+[ext_resource type="Texture2D" uid="uid://bmyilfdtg5bj" path="res://assets/2d/sprite_sheets/player.png" id="2_vxxal"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vshgk"]
-size = Vector2(9.5, 17)
+size = Vector2(7.75, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g63cr"]
 atlas = ExtResource("2_vxxal")
@@ -292,13 +292,13 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(253, 255)
+z_as_relative = false
 scale = Vector2(2, 2)
 motion_mode = 1
 script = ExtResource("1_aygpa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.25, 9.5)
+position = Vector2(0, 8.765)
 shape = SubResource("RectangleShape2D_vshgk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -308,6 +308,5 @@ frame = 2
 frame_progress = 0.977058
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(2.751, 0)
 zoom = Vector2(2, 2)
 limit_left = -10000030

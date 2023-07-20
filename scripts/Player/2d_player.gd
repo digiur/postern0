@@ -15,12 +15,15 @@ func _process(_delta):
 	if input.x or velocity.x:
 		_animated_sprite.play("walk side")
 		_animated_sprite.flip_h = false if velocity.x > 0 else true
+
 	elif input.y or velocity.y:
 		var animation = "walk down" if velocity.y > 0 else "walk up"
 		_animated_sprite.play(animation)
+
 	elif _last_input.x:
 		_animated_sprite.play("idle side")
 		_animated_sprite.flip_h = false if _last_input.x > 0 else true
+
 	elif _last_input.y:
 		var animation = "idle down" if _last_input.y > 0 else "idle up"
 		_animated_sprite.play(animation)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmyilfdtg5bj"
-path="res://.godot/imported/player.png-4fed6043466b06fd3e63c146a0cfd365.ctex"
+uid="uid://bs0tghwkrfnfc"
+path="res://.godot/imported/mage_city.png-7582af8d978a0fce0566e24afab67095.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2d/sprite_sheets/player.png"
-dest_files=["res://.godot/imported/player.png-4fed6043466b06fd3e63c146a0cfd365.ctex"]
+source_file="res://assets/2d/tilesets/mage_city.png"
+dest_files=["res://.godot/imported/mage_city.png-7582af8d978a0fce0566e24afab67095.ctex"]
 
 [params]
 

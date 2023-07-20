@@ -1,7 +1,7 @@
 [gd_resource type="TileSet" load_steps=7 format=3 uid="uid://m4bxkhsoqi82"]
 
-[ext_resource type="Texture2D" uid="uid://bs0tghwkrfnfc" path="res://2d/tilesets/mage_city.png" id="1_8n01w"]
-[ext_resource type="PackedScene" uid="uid://buq1b23gikd75" path="res://scenes/collision_tile.tscn" id="2_xd7hj"]
+[ext_resource type="Texture2D" uid="uid://bs0tghwkrfnfc" path="res://assets/2d/tilesets/mage_city.png" id="1_8n01w"]
+[ext_resource type="PackedScene" uid="uid://buq1b23gikd75" path="res://scenes/tiles/collision_tile.tscn" id="2_xd7hj"]
 [ext_resource type="PackedScene" uid="uid://cfgyutfa8nuef" path="res://scenes/particles/smoke.tscn" id="3_ntcbm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j6sym"]
