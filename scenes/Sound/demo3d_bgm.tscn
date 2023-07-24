@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dph5vuf4322hx"]
+
+[ext_resource type="AudioStream" uid="uid://qv7kx285ykoo" path="res://assets/sound/ambience.mp3" id="1_8okxk"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_8okxk")
+volume_db = 7.467
+autoplay = true
+stream_paused = true
+bus = &"3D"

@@ -34,9 +34,6 @@ func _process(_delta):
 		var animation = "idle down" if _last_input.y > 0 else "idle up"
 		_animated_sprite.play(animation)
 
-	print('Player facing')
-	print(facing)
-
 func _physics_process(delta):
 	# Replace UI actions with custom gameplay actions.
 	var input = Vector2()

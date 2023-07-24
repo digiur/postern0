@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c15hicfbfjd6y"]
+
+[ext_resource type="AudioStream" uid="uid://3wq713tp7x6d" path="res://assets/sound/sonatina_letsadventure_7MemoryBox.ogg" id="1_6ytd2"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_6ytd2")
+volume_db = -10.667
+autoplay = true
+stream_paused = true
+bus = &"2D"
