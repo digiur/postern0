@@ -6,5 +6,4 @@
 stream = ExtResource("1_6ytd2")
 volume_db = -10.667
 autoplay = true
-stream_paused = true
 bus = &"2D"
