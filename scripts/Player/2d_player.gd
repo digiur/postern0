@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-@onready var _animated_sprite = $AnimatedSprite2D
+@onready var animated_sprite = $AnimatedSprite2D
+@onready var actionable_finder = $Direction/ActionableFinder
 
 @export var move_speed = 150.0
 @export var accel_frames = 3
@@ -9,6 +10,12 @@ var _last_input = Vector2()
 
 var facing = Consts.Facing.RIGHT
 
+func _unhandled_input(event):
+	if Input.is_action_just_pressed("ui_accept"):
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].action()
+
 func _process(_delta):
 	var input = Vector2()
 	input.x = Input.get_axis("ui_left", "ui_right")
@@ -16,23 +23,23 @@ func _process(_delta):
 
 	if input.x or velocity.x:
 		facing = Consts.Facing.RIGHT if velocity.x > 0 else Consts.Facing.LEFT
-		_animated_sprite.flip_h = false if velocity.x > 0 else true
-		_animated_sprite.play("walk side")
+		animated_sprite.flip_h = false if velocity.x > 0 else true
+		animated_sprite.play("walk side")
 
 	elif input.y or velocity.y:
 		facing = Consts.Facing.DOWN if velocity.y > 0 else Consts.Facing.UP
 		var animation = "walk down" if velocity.y > 0 else "walk up"
-		_animated_sprite.play(animation)
+		animated_sprite.play(animation)
 
 	elif _last_input.x:
 		facing = Consts.Facing.RIGHT if _last_input.x > 0 else Consts.Facing.LEFT
-		_animated_sprite.flip_h = false if _last_input.x > 0 else true
-		_animated_sprite.play("idle side")
+		animated_sprite.flip_h = false if _last_input.x > 0 else true
+		animated_sprite.play("idle side")
 
 	elif _last_input.y:
 		facing = Consts.Facing.DOWN if _last_input.y > 0 else Consts.Facing.UP
 		var animation = "idle down" if _last_input.y > 0 else "idle up"
-		_animated_sprite.play(animation)
+		animated_sprite.play(animation)
 
 func _physics_process(delta):
 	# Replace UI actions with custom gameplay actions.

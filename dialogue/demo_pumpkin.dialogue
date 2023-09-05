@@ -1,0 +1,17 @@
+~ start
+
+Mr Pumpkin: I'm a pumpkin!
+
+if pumpkin_package_status == "given"
+	Mr Pumpkin: Thanks for the package... You didn't open it did you!?
+	set pumpkin_package_status = "delivered"
+
+=> END
+
+~ alt_pumpkin
+
+Dr Pumpkin: I'm a doctor!
+if pumpkin_package_status == "given"
+	set pumpkin_package_status = "delivered"
+
+=> END

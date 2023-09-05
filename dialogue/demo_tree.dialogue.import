@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://dnou02svr7nix"
+path="res://.godot/imported/demo_tree.dialogue-338d798f47c48df1c94703ebbc1b858b.tres"
+
+[deps]
+
+source_file="res://dialogue/demo_tree.dialogue"
+dest_files=["res://.godot/imported/demo_tree.dialogue-338d798f47c48df1c94703ebbc1b858b.tres"]
+
+[params]
+
+defaults=true
