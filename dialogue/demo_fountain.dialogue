@@ -17,6 +17,10 @@ elif pumpkin_package_status == "delivered":
 	The Fountain of The Square: Thank you so much. As promised, here is your reward......
 	*The fountain splashes you in the face*
 	set pumpkin_package_status = "splashed"
+elif pumpkin_package_status == "intercepted":
+	The Fountain of The Square: Mr. Pumpkin never got the package. You didn't give it to Eggie Burtania, did you?
+	*The fountain splashes you in the face*
+	set pumpkin_package_status = "splashed"
 elif pumpkin_package_status == "splashed"
 	*The fountain splashes you in the face*
 	*Again......*

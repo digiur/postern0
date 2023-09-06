@@ -1,0 +1,12 @@
+~ start
+
+Mysterious Basket: Hey, bozo, I got eggs ova here.
+if pumpkin_package_status == "given"
+	Mysterious Basket: Nice package ya got there. Hand it ova.
+	- Give Package
+		set pumpkin_package_status = "intercepted"
+		Mysterious Basket: HA IDIOT NICE PACKAGE, LOSER.
+	- Withhold Package
+		Mysterious Basket: Dick.
+
+=> END
