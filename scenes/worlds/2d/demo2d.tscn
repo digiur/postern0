@@ -540,7 +540,6 @@ layer_3/tile_data = PackedInt32Array()
 [node name="Actionable" parent="." instance=ExtResource("5_n45oc")]
 position = Vector2(-497, -77)
 dialogue_resource = ExtResource("6_ois7x")
-dialogue_start = "alt_pumpkin"
 
 [node name="Actionable2" parent="." instance=ExtResource("5_n45oc")]
 position = Vector2(79, -47)
